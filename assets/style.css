@@ -1,0 +1,19 @@
+.header {
+    height: 75px;
+    background-color:  darkblue;
+    color: white;
+}
+
+
+.btn-primary {
+    background-color: #202099;
+    border: none;
+}
+
+.container-fluid, .card-deck {
+    width: 100%;
+}
+
+img {
+    max-height: 15%;
+}

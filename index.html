@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>What's The Weather Up There?</title>
+  </head>
+  <body>
+    <header>
+      <div class="header d-flex justify-content-center align-items-center">
+        <h1 class="text-center">What's The Weather Up There?</h1>
+      </div>
+    </header>
+    
+    <main class="container-fluid mt-2">
+      <div class="row justify-content-around ">
+        
+        <div class="col-12 col-md-4">
+          <div class="card bg-light mb-3">
+            <h2 class="card-header">Search for a City:</h2>
+            <form id="user-form" class="card-body">
+              <div class="form-group">
+                <input name="city" id="city" type="text" autofocus="true" class="form-control" placeholder="Type the name of a city"/>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit">Search</button>
+            </form>
+          </div>
+          <div id="searchHistory" class="searches d-flex flex-column justify-content-between mx-5">
+            
+          </div>
+        </div>
+        <div id="weather" class="col-12 col-md-8">
+          <div class="card">
+            <div class="">
+              <h2 class="card-title"> <span id="city-name"></span><span id="currDate"></span><img id="currImg" src="" alt="Today's Weather Icon"></h2>
+            </div>
+            <div id="current" class="card-text">
+              <p>Temp: <span id="currTemp"></span></p>
+              <p>Wind: <span id="currWind"></span></p>
+              <p>Humidity: <span id="currHumidity"></span></p>
+              <p>UV Index: <span id="currUv"></span></p>
+            </div>
+          </div>
+          <div>
+            <h3 class="forecast-title my-3">5-Day Forecast:</h3>
+          </div>
+          <div class="row ">
+            <div class="card-deck">
+              <div class="card forecast-day" id="1">
+                <div class="card-body">
+                  <h4 class="forecast card-title"><span id="date1"></span></h4>
+                  <div class="card-text">
+                    <img id="img1" src="" alt="">
+                    <p>Temp: <span id="Temp1"></span></p>
+                    <p>Wind: <span id="Wind1"></span></p>
+                    <p>Humidity: <span id="Humidity1"></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card forecast-day" id="2">
+                <div class="card-body">
+                  <h4 class="forecast card-title"><span id="date2"></span></h4>
+                  <div class="card-text">
+                    <img id="img2" src="" alt="">
+                    <p>Temp: <span id="Temp2"></span></p>
+                    <p>Wind: <span id="Wind2"></span></p>
+                    <p>Humidity: <span id="Humidity2"></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card forecast-day" id="3">
+                <div class="card-body">
+                  <h4 class="forecast card-title"><span id="date3"></span></h4>
+                  <div class="card-text">
+                    <img id="img3" src="" alt="">
+                    <p>Temp: <span id="Temp3"></span></p>
+                    <p>Wind: <span id="Wind3"></span></p>
+                    <p>Humidity: <span id="Humidity3"></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card forecast-day" id="4">
+                <div class="card-body">
+                  <h4 class="forecast card-title"><span id="date4"></span></h4>
+                  <div class="card-text">
+                    <img id="img4" src="" alt="">
+                    <p>Temp: <span id="Temp4"></span></p>
+                    <p>Wind: <span id="Wind4"></span></p>
+                    <p>Humidity: <span id="Humidity4"></span></p>    
+                  </div>
+                </div>
+              </div>
+              <div class="card forecast-day" id="5">
+                <div class="card-body">
+                  <h4 class="forecast card-title"><span id="date5"></span></h4>
+                  <div class="card-text">
+                    <img id="img5" src="" alt="">
+                    <p>Temp: <span id="Temp5"></span></p>
+                    <p>Wind: <span id="Wind5"></span></p>
+                    <p>Humidity: <span id="Humidity5"></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <script src="./assets/script.js"></script>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
